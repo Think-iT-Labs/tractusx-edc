@@ -282,7 +282,7 @@ public class MultiCloudTest {
     }
 
     @Test
-    void transferFile_s3ToAzureMultipleFiles_whenConsumerDefinesBloblName_success(Vault vault) {
+    void transferFile_s3ToAzureMultipleFiles_whenConsumerDefinesBlobName_success(Vault vault) {
         var sourceBucket = s3Client.createBucket(CreateBucketRequest.builder().bucket(BUCKET_NAME).build());
         assertThat(sourceBucket.sdkHttpResponse().isSuccessful()).isTrue();
 
