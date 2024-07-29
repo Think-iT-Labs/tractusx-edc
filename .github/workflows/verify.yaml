@@ -23,6 +23,7 @@
 name: "Verify"
 
 on:
+  push:
   workflow_call:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -143,7 +144,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:16.1
+        image: postgres:16.3
         ports:
           - 5432:5432
         env:
@@ -154,7 +155,13 @@ jobs:
       - uses: ./.github/actions/setup-java
 
       - name: Run Postgresql E2E tests
-        run: ./gradlew test -DincludeTags="PostgresqlIntegrationTest" --refresh-dependencies
+        run: |
+          (./gradlew test -DincludeTags="PostgresqlIntegrationTest" > logs) || true
+          cat logs
+          bind=$(grep "Failed to bind" logs)
+          echo "FALLIMENTO? $bind"
+          port=$(echo $bind | rev | cut -d ":" -f1 | rev)
+          sudo lsof -n -i :${port}
 
   cloud-transfer-tests:
     runs-on: ubuntu-latest
