@@ -28,4 +28,5 @@ dependencies {
     implementation(project(":spi:core-spi"))
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
 }

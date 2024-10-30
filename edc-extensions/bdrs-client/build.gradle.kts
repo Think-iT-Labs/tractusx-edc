@@ -26,7 +26,7 @@ dependencies {
     implementation(project(":core:core-utils"))
     implementation(project(":spi:bdrs-client-spi"))
     implementation(project(":spi:core-spi"))
-    implementation(libs.edc.spi.boot)
+    implementation(libs.edc.spi.web)
     implementation(libs.edc.spi.core)
     implementation(libs.edc.spi.http)
     implementation(libs.edc.spi.identitytrust)
@@ -37,6 +37,7 @@ dependencies {
 
     testImplementation(libs.netty.mockserver)
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(libs.awaitility)
     testImplementation(libs.edc.identity.trust.sts.embedded)
     testImplementation(libs.edc.core.token)

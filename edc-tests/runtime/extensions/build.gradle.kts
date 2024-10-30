@@ -24,7 +24,6 @@ plugins {
 
 dependencies {
     implementation(project(":core:core-utils"))
-    implementation(libs.edc.core.controlplane)
     implementation(libs.edc.lib.util)
     implementation(libs.edc.spi.web)
 }

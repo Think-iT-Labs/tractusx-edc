@@ -23,6 +23,8 @@ plugins {
 }
 
 dependencies {
+    runtimeOnly(project(":edc-extensions:boot-custom"))
+
     runtimeOnly(project(":core:edr-core"))
     runtimeOnly(project(":edc-extensions:tokenrefresh-handler"))
     runtimeOnly(project(":edc-extensions:dcp:tx-dcp-sts-dim"))
@@ -52,7 +54,6 @@ dependencies {
     runtimeOnly(libs.edc.api.control.config)
     runtimeOnly(libs.edc.dpf.api.public.v2)
     runtimeOnly(libs.edc.core.connector)
-    runtimeOnly(libs.edc.boot)
     runtimeOnly(libs.edc.core.edrstore)
 
     runtimeOnly(libs.bundles.edc.monitoring)

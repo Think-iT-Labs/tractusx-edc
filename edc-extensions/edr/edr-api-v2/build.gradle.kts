@@ -40,6 +40,7 @@ dependencies {
     testImplementation(testFixtures(libs.edc.core.jersey))
     testImplementation(libs.restAssured)
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(libs.edc.lib.jersey.providers)
     testImplementation(libs.edc.lib.transform)
     testImplementation(libs.edc.spi.contract)

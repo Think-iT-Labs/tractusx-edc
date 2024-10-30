@@ -29,4 +29,5 @@ dependencies {
     implementation(libs.edc.spi.dataplane.http)
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
 }

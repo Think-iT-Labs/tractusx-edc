@@ -50,7 +50,12 @@ project.subprojects.forEach {
     dependencies {
         jacocoAggregation(project(it.path))
     }
+}
 
+configurations {
+    all {
+        exclude(group = "org.eclipse.edc", module = "boot")
+    }
 }
 
 allprojects {

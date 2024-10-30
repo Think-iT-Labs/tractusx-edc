@@ -39,4 +39,5 @@ dependencies {
     testImplementation(testFixtures(project(":spi:edr-spi")))
     testImplementation(testFixtures(libs.edc.core.sql))
     testImplementation(testFixtures(libs.edc.junit))
+testImplementation(project(":edc-extensions:boot-custom"))
 }

@@ -36,5 +36,6 @@ dependencies {
     testImplementation(libs.edc.transaction.local)
     testImplementation(testFixtures(libs.edc.core.sql))
     testImplementation(testFixtures(libs.edc.junit))
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(testFixtures(project(":edc-extensions:agreements:retirement-evaluation-core")))
 }

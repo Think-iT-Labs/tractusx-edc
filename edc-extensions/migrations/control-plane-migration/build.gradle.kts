@@ -37,5 +37,6 @@ dependencies {
     runtimeOnly(libs.flyway.database.postgres)
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(testFixtures(libs.edc.sql.core))
 }

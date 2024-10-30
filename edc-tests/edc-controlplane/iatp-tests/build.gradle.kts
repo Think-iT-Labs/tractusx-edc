@@ -31,6 +31,7 @@ dependencies {
     testImplementation(libs.edc.ih.spi.participant.context)
     testImplementation(libs.edc.ih.spi.credentials)
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(libs.edc.core.token)
     testImplementation(libs.edc.identity.vc.ldp)
     testImplementation(libs.edc.lib.jws2020)

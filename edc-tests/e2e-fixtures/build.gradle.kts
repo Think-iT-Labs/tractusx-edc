@@ -29,7 +29,7 @@ dependencies {
     testFixturesApi(project(":edc-extensions:agreements:retirement-evaluation-spi"))
     testFixturesApi(project(":edc-extensions:bpn-validation:bpn-validation-spi"))
 
-
+    testFixturesApi(project(":edc-extensions:boot-custom"))
     testFixturesApi(libs.edc.core.token)
     testFixturesApi(libs.edc.identity.trust.sts.embedded)
     testFixturesApi(libs.edc.junit)

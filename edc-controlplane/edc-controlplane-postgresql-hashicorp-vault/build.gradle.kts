@@ -36,7 +36,6 @@ dependencies {
     runtimeOnly(libs.bundles.edc.sqlstores)
     runtimeOnly(libs.edc.transaction.local)
     runtimeOnly(libs.edc.sql.pool)
-    runtimeOnly(libs.edc.core.controlplane)
     runtimeOnly(libs.postgres)
 }
 

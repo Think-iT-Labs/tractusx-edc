@@ -27,6 +27,7 @@ dependencies {
     testImplementation(testFixtures(project(":edc-tests:e2e-fixtures")))
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(libs.restAssured)
 
     // test runtime config

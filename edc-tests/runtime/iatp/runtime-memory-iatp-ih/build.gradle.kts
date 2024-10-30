@@ -43,7 +43,6 @@ dependencies {
         exclude("org.eclipse.edc", "data-plane-selector-client")
     }
 
-    implementation(libs.edc.core.controlplane)
     implementation(libs.edc.core.identitytrust)
     implementation(libs.edc.core.did)
     implementation(libs.edc.identity.trust.transform)

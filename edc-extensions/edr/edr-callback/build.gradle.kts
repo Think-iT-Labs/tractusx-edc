@@ -35,4 +35,5 @@ dependencies {
     implementation(libs.nimbus.jwt)
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
 }

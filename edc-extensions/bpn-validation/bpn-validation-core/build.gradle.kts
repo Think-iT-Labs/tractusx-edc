@@ -34,6 +34,7 @@ dependencies {
     implementation(libs.edc.spi.policyengine)
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testFixturesImplementation(libs.edc.junit)
     testFixturesImplementation(libs.junit.jupiter.api)
     testFixturesImplementation(libs.assertj)

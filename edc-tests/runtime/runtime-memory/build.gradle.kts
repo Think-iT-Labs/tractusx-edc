@@ -44,7 +44,6 @@ dependencies {
         exclude("org.eclipse.edc", "data-plane-selector-client")
     }
 
-    implementation(libs.edc.core.controlplane)
     // for the controller
     implementation(libs.jakarta.rsApi)
 }

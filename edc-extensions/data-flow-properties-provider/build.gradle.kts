@@ -28,4 +28,5 @@ dependencies {
     implementation(project(":spi:bdrs-client-spi"))
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
 }

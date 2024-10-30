@@ -24,6 +24,8 @@ plugins {
 }
 
 dependencies {
+    runtimeOnly(project(":edc-extensions:boot-custom"))
+
     runtimeOnly(project(":core:edr-core"))
     runtimeOnly(project(":edc-extensions:dataplane:dataplane-selector-configuration"))
     runtimeOnly(project(":edc-extensions:provision-additional-headers"))

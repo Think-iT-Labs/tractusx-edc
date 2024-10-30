@@ -25,7 +25,7 @@ plugins {
 
 
 dependencies {
-    implementation(libs.edc.boot)
+    implementation(project(":edc-extensions:boot-custom"))
     implementation(libs.edc.iam.mock)
     implementation(project(":edc-controlplane:edc-controlplane-base")) {
         exclude(module = "auth-tokenbased")
@@ -37,7 +37,6 @@ dependencies {
         exclude(module = "edr-callback")
         exclude("org.eclipse.edc", "identity-trust-issuers-configuration")
     }
-    implementation(libs.edc.core.controlplane)
     implementation(libs.jakarta.rsApi)
 }
 

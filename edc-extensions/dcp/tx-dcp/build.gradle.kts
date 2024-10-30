@@ -34,4 +34,5 @@ dependencies {
     implementation(project(":core:core-utils"))
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
 }

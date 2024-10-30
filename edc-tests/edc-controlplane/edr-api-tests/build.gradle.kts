@@ -30,6 +30,7 @@ dependencies {
 
     testImplementation(libs.netty.mockserver)
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(libs.restAssured)
     testImplementation(libs.awaitility)
     testRuntimeOnly(libs.edc.transaction.local)

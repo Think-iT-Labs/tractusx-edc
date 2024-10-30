@@ -27,4 +27,5 @@ dependencies {
     implementation(libs.edc.fc.spi.crawler)
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
 }

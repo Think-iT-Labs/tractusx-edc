@@ -29,13 +29,12 @@ plugins {
 
 dependencies {
     // compile-time dependencies
-    implementation(libs.edc.spi.boot)
+    implementation(libs.edc.spi.web)
     implementation(libs.edc.spi.controlplane)
     implementation(libs.edc.lib.util)
 
     // runtime dependencies
     runtimeOnly(libs.edc.core.connector)
-    runtimeOnly(libs.edc.boot)
     runtimeOnly(libs.edc.api.management) {
         exclude("org.eclipse.edc", "edr-cache-api")
     }
@@ -48,6 +47,7 @@ dependencies {
     runtimeOnly(libs.edc.ext.jsonld)
 
     testImplementation(libs.edc.junit)
+    implementation(project(":edc-extensions:boot-custom"))
     testImplementation(libs.assertj)
 }
 

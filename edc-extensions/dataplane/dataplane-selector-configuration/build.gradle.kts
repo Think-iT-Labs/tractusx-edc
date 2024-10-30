@@ -28,4 +28,5 @@ dependencies {
     implementation(libs.edc.spi.dataplane.transfer)
     implementation(libs.bouncyCastle.bcpkixJdk18on)
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
 }

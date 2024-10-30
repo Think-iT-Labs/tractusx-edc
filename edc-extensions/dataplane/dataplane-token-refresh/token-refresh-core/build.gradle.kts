@@ -38,6 +38,7 @@ dependencies {
     implementation(libs.edc.lib.token)
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(libs.edc.dpf.core)
     testImplementation(libs.edc.core.connector)
     testImplementation(libs.edc.lib.boot)

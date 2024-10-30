@@ -32,6 +32,7 @@ dependencies {
     testImplementation(testFixtures(libs.edc.core.jersey))
     testImplementation(libs.edc.spi.core)
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(libs.restAssured)
     testImplementation(project(":edc-extensions:agreements:retirement-evaluation-spi"))
 }

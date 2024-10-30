@@ -25,6 +25,7 @@ dependencies {
 
     testImplementation(project(":spi:tokenrefresh-spi"))
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(libs.restAssured)
 
     testImplementation(project(":spi:core-spi"))

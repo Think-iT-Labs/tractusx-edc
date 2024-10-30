@@ -26,4 +26,5 @@ dependencies {
     implementation(libs.edc.spi.core)
     implementation(libs.edc.spi.jsonld)
     testImplementation(testFixtures(libs.edc.junit))
+testImplementation(project(":edc-extensions:boot-custom"))
 }

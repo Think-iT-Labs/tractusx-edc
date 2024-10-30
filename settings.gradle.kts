@@ -33,6 +33,7 @@ include(":core:json-ld-core")
 include(":core:core-utils")
 
 // extensions - control plane
+include(":edc-extensions:boot-custom")
 include(":edc-extensions:bpn-validation")
 include(":edc-extensions:bpn-validation:bpn-validation-api")
 include(":edc-extensions:bpn-validation:bpn-validation-spi")
@@ -126,4 +127,18 @@ dependencyResolutionManagement {
         mavenCentral()
         mavenLocal()
     }
+
+    components {
+        all {
+            allVariants {
+                withDependencies {
+                    removeAll {
+                        it.group == "org.eclipse.edc" && it.name == "boot"
+                    }
+                }
+            }
+        }
+    }
 }
+
+

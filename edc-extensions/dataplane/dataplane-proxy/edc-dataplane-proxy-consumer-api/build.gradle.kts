@@ -39,6 +39,7 @@ dependencies {
 
 
     testImplementation(libs.edc.junit)
+testImplementation(project(":edc-extensions:boot-custom"))
     testImplementation(testFixtures(libs.edc.core.jersey))
     testImplementation(libs.restAssured)
 }
