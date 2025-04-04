@@ -1,0 +1,41 @@
+---
+name: "Bump version"
+
+on:
+  # can be called manually from GH webpage
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  Bump-Version:
+    name: 'Update snapshot version'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set new snapshot version
+        shell: bash
+        run: |
+          # Extract release version
+          VERSION=$(grep version= gradle.properties | cut -c 9-)
+          IFS=.- read -r RELEASE_VERSION_MAJOR RELEASE_VERSION_MINOR RELEASE_VERSION_PATCH SNAPSHOT<<<"$VERSION"
+          INC=0
+          # Compute new snapshot version, do not increment snapshot on non-final releases, e.g. -rc1
+          if [ -z $SNAPSHOT ]; then
+            # snapshot
+            echo "$VERSION is a final release version, increase patch for next snapshot"
+            INC=1
+          else
+            echo "$VERSION is not a final release version (contains \"$SNAPSHOT\"), will not increase patch"
+          fi
+          
+          VERSION="$RELEASE_VERSION_MAJOR.$((RELEASE_VERSION_MINOR+$INC)).0-SNAPSHOT"
+          SNAPSHOT_VERSION=$VERSION
+          
+          # Persist the "version" in the gradle.properties
+          sed -i "s/version=.*/version=$SNAPSHOT_VERSION/g" gradle.properties
+          
+          # Commit and push to origin main
+          git add gradle.properties
+          git commit --message "Introduce new snapshot version $SNAPSHOT_VERSION"
+          
+          git push
